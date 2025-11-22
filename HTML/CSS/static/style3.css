@@ -1,0 +1,21 @@
+h1{
+    color: black;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 4px;
+}
+p{
+    color: rgb(14, 0, 141);
+    background-color: rgb(247, 48, 13);
+    font-size: 2rem;
+    text-align: center;
+}
+body{
+    background-color: rgb(65, 238, 65);
+}
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    background-color: chocolate;
+    padding: 10px;
+}
