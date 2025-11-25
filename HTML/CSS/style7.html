@@ -1,59 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>css display properties</title>
-    <style>
-      .block {
-        display: block;
-        background-color: rgb(89, 193, 211);
-        margin: 10px;
-        padding:4px;
-      }
-      .inline {
-        display: inline;
-        background-color: coral;
-        margin: 10px;
-        padding: 3px;
-      }
-      .inline-block{
-        display: inline-block;
-        width: 150px;
-        height: 50px;
-        background-color: lightblue;
-      }
-      .flex div{
-        background-color: burlywood;
-        margin: 5px;
-        padding: 10px;
-        width: 300px;
-        height: 200px;
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- 1.block -->
-    <div class="block">This is a block elements</div>
-    <div class="block">This the another block elements</div>
 
-    <!-- 2.inline -->
-    <span class="inline">this the inline elements</span>
-    <span class="inline">this the another inline elements</span>
-    <br>
-    <br>
-    <!-- 3.inline block -->
-       <div class="inline-block">this is inline block</div>
-       <div class="inline-block">this is another inline block</div>
-       <!-- 4.flex -->
-        <div class="flex">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-        </div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>css display properties</title>
+  <style>
+    .block {
+      display: block;
+      background-color: rgb(89, 193, 211);
+      margin: 10px;
+      padding: 4px;
+      border: 2px solid;
+      text-align: center;
+    }
+
+    .inline {
+      display: inline;
+      background-color: coral;
+      margin: 10px;
+      padding: 3px;
+    }
+
+    .inline-block {
+      display: inline-block;
+      width: 150px;
+      height: 50px;
+      background-color: lightblue;
+    }
+
+    .flex {
+      background-color: burlywood;
+      margin: 5px;
+      padding: 10px;
+      width: 150px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 1.block -->
+  <div class="block">This is a block elements</div>
+  <div class="block">This the another block elements</div>
+
+  <!-- 2.inline -->
+  <span class="inline">this the inline elements</span>
+  <span class="inline">this the another inline elements</span>
+  <br>
+  <br>
+  <!-- 3.inline block -->
+  <div class="inline-block">this is inline block</div>
+  <div class="inline-block">this is another inline block</div>
+  <br>
+  <!-- 4.flex -->
+  <div class="flex">
+    <div>item 1</div>
+    <div>item 2</div>
+    <div>item 3</div>
+    <div>item 4</div>
+    <div>item 5</div>
+  </div>
+
 </html>
