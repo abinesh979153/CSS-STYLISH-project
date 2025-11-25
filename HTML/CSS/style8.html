@@ -1,279 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Color Block Layout</title>
-    <style>
-      :root {
-        --gap: 8px;
-        --border: 3px solid #222;
-      }
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box Layout</title>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    body{
         background: #fff;
-        font-family: system-ui, Segoe UI, Roboto, Arial;
-      }
-
-      .card {
+        padding:20px;
+        display:flex;
+        justify-content:center;
+    }
+    .wrapper{
         width: 900px;
-        background: transparent;
-        padding: 10px;
-        box-sizing: border-box;
-      }
-      .stack {
-        display: grid;
-        gap: var(--gap);
-        grid-template-rows:
-          90px
-          180px
-          200px
-          90px;
-      }
-      .block {
-        border: var(--border);
-        box-sizing: border-box;
-        position: relative;
-        background: transparent;
-      }
-      .top {
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        gap: var(--gap);
-        align-items: center;
-      }
+        border: 2px solid #000;
+    }
+    .row{
+        display:flex;
+        width:100%;
+        border:2px solid #000;
+    }
+    .box{
+        border:2px solid #000;
+    }
+    /* Heights */
+    .h70{ height:70px; }
+    .h200{ height:200px; }
+    .h150{ height:150px; }
+    .h100{ height:100px; }
 
-      .top .left {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        gap: 6px;
-        padding: 8px;
-        background: #000000;
-        border: var(--border);
-      }
-      .top .left .mini {
-        border: 3px solid #db0b0b;
-        height: 36px;
-        background: #0ec90e;
-      }
+    /* Flex grow to fill rows */
+    .grow1{ flex:1; }
+    .grow2{ flex:2; }
+    .grow3{ flex:3; }
 
-      .top .center {
-        background: #2f09b9;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .top .center .small-rect {
-        width: 120px;
-        height: 56px;
-        background: #bfe8f8;
-        border: 3px solid #2b2b2b;
-      }
+    /* Colors */
+    .red{ background:#e43e3e; }
+    .green{ background:#50a144; }
+    .yellow{ background:#e1d55a; }
+    .pink{ background:#f5a6c0; }
+    .orange{ background:#f48b27; }
+    .blue{ background:#7cd3ea; }
+    .brown{ background:#b47c4e; }
+    .purple{ background:#9a5cb7; }
+    .grey{ background:#bdbcbc; }
+    .lightgrey{ background:#dcdcdc; }
+</style>
+</head>
 
-      .top .right {
-        background: #c41414;
-      }
+<body>
+<div class="wrapper">
 
-      .middle {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        background: #c437a5;
-        padding: 18px;
-      }
-      .middle .inner {
-        border: 10px solid #77bd37;
-        width: 48%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #1a4b6b;
-      }
-      .middle .inner .blue {
-        width: 60%;
-        height: 56px;
-        background: #214b5c;
-        border: 3px solid #b80000;
-      }
-
-      .panels {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: var(--gap);
-        align-items: stretch;
-      }
-
-      .panel {
-        background: #5f3103;
-        padding: 12px;
-        box-sizing: border-box;
-        border: var(--border);
-      }
-
-      .panel .inner-frame {
-        background: #fffb00;
-        border: 4px solid #ca0076;
-        height: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-      }
-
-      .panel .top-strip {
-        height: 28px;
-        background: #32be5c;
-        border: 3px solid #028791;
-        margin-bottom: 8px;
-      }
-      .panel .big-green {
-        background: #046e1f;
-        height: 120px;
-        border: 6px solid #064f80;
-      }
-
-      .panel.center .big-green {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .panel.center .two-yellow {
-        display: flex;
-        gap: 12px;
-      }
-      .panel.center .two-yellow .y {
-        width: 72px;
-        height: 72px;
-        background: #050044;
-        border: 4px solid #8a0073;
-      }
-
-      .footer {
-        background: #af6161;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 12px;
-        border: var(--border);
-      }
-      .footer .left-box {
-        width: 36%;
-        height: 56px;
-        background: #481261;
-        border: 3px solid #5a0d33;
-      }
-      .footer .right-boxes {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-      }
-      .footer .small-red {
-        width: 88px;
-        height: 56px;
-        background: #e52b2b;
-        border: 3px solid #2b2b2b;
-      }
-      .footer .small-purple {
-        width: 88px;
-        height: 56px;
-        background: #a25fb3;
-        border: 3px solid #2b2b2b;
-      }
-      @media (max-width: 920px) {
-        .card {
-          width: 94vw;
-        }
-        .top {
-          grid-template-columns: 1fr 1fr;
-        }
-        .top .right {
-          display: none;
-        }
-        .middle .inner {
-          width: 60%;
-        }
-        .panels {
-          grid-template-columns: 1fr;
-        }
-        .footer {
-          flex-direction: column;
-          gap: 8px;
-          align-items: stretch;
-        }
-        .footer .right-boxes {
-          justify-content: flex-end;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="card">
-      <div class="stack">
-        <!-- TOP ROW -->
-        <div class="top block">
-          <div class="left">
-            <div class="mini"></div>
-            <div class="mini"></div>
-          </div>
-
-          <div class="center block">
-            <div class="small-rect"></div>
-          </div>
-
-          <div class="right block"></div>
-        </div>
-
-        <!-- MIDDLE PINK -->
-        <div class="middle block">
-          <div class="inner">
-            <div class="blue"></div>
-          </div>
-        </div>
-
-        <!-- THREE PANELS -->
-        <div class="panels">
-          <!-- left panel -->
-          <div class="panel">
-            <div class="inner-frame">
-              <div class="top-strip"></div>
-              <div class="big-green"></div>
+    <!-- Row 1 -->
+    <div class="row h70">
+        <div class="box red" style="width:50px;"></div>
+        <div class="box grow2">
+            <div class="row h35">
+                <div class="box yellow grow1"></div>
+                <div class="box green grow1"></div>
             </div>
-          </div>
-
-          <!-- center panel -->
-          <div class="panel center">
-            <div class="inner-frame">
-              <div class="top-strip"></div>
-              <div class="big-green">
-                <div class="two-yellow">
-                  <div class="y"></div>
-                  <div class="y"></div>
-                </div>
-              </div>
+            <div class="row h35">
+                <div class="box yellow grow1"></div>
+                <div class="box green grow1"></div>
             </div>
-          </div>
-
-          <!-- right panel -->
-          <div class="panel">
-            <div class="inner-frame">
-              <div class="top-strip"></div>
-              <div class="big-green"></div>
-            </div>
-          </div>
         </div>
-
-        <!-- FOOTER -->
-        <div class="footer block">
-          <div class="left-box"></div>
-          <div class="right-boxes">
-            <div class="small-red"></div>
-            <div class="small-purple"></div>
-          </div>
-        </div>
-      </div>
+        <div class="box orange grow3"></div>
+        <div class="box red" style="width:50px;"></div>
     </div>
-  </body>
+
+    <!-- Row 2 -->
+    <div class="row h200">
+        <div class="box purple" style="width:40px;"></div>
+        <div class="box brown grow2">
+            <div class="box blue h100" style="margin:20px;"></div>
+        </div>
+        <div class="box pink grow3"></div>
+        <div class="box purple" style="width:40px;"></div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="row h150 orange">
+        <div class="row grow1">
+            <div class="box red h30 grow1"></div>
+            <div class="box green grow1"></div>
+        </div>
+        <div class="row grow1">
+            <div class="box red h30 grow1"></div>
+            <div class="box green grow1">
+                <div class="row h70">
+                    <div class="box yellow grow1"></div>
+                    <div class="box yellow grow1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row grow1">
+            <div class="box red h30 grow1"></div>
+            <div class="box green grow1"></div>
+        </div>
+    </div>
+
+    <!-- Row 4 -->
+    <div class="row h100 grey">
+        <div class="box blue" style="width:35%; margin:20px;"></div>
+        <div class="row" style="width:35%; margin:20px;">
+            <div class="box red grow1"></div>
+            <div class="box blue grow1"></div>
+            <div class="box purple grow1"></div>
+        </div>
+    </div>
+
+</div>
+</body>
 </html>
