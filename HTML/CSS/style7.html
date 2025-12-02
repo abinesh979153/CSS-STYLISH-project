@@ -30,19 +30,35 @@
       height: 50px;
       background-color: lightblue;
     }
-    .flex div{
+    .flex{
       display: flex;
       background-color: rgb(139, 139, 219);
       padding: 10px;
     }
 
-    .flex {
+    .flex div{
       background-color: rgb(207, 102, 102);
       margin: 5px;
       padding: 10px;
-      width: 300px;
-     height: 200px;
+      width: 150px;
+     height: 150px;
       text-align: center;
+    }
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 10px;
+      background-color: aquamarine;
+      padding: 10px;
+    }
+    .grid div{
+           background-color: chocolate;
+           padding: 10px;
+           text-align: center;
+           margin: 10px;
+    }
+    .none{
+      display: none;
     }
   </style>
 </head>
@@ -67,6 +83,25 @@
      <div>item 3</div>
      <div>item 4</div>
      <div>item 5</div>
+     <div>item 6</div>
+     <div>item 7</div>
+     <div>item 8</div>
+     <div>item 9</div>
+     <div>item 10</div>
   </div>
+  <br>
+  <!-- 5.grid -->
+  <div class="grid">
+     <div>item 1</div>
+     <div>item 2</div>
+     <div>item 3</div>
+     <div>item 4</div>
+     <div>item 5</div>
+     <div>item 6</div>
+  </div>
+  <!-- 6.none -->
+   <div class="none">
+    <h1>this messege none</h1>
+   </div>
 </body>
   </html>
