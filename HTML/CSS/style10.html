@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css posisioning</title>
+    <STYle>
+        .container{
+            position: relative;
+            border: 2px solid;
+            padding: 20px;
+            height: 500px;
+        }
+        .static-box{
+            position: static;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            margin-bottom: 10px;
+        }
+        .relative-box{
+          position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-bottom: 10px;
+           }  
+    </STYle>
+</head>
+<body>
+    <div class="container">
+        <div class="static-box">static</div>
+        <div class="relative-box">relative</div>
+        <div class="absolute-box">absolute</div>
+        <div class="sticky-box">sticky</div>
+    </div>
+    <hr>
+    <div><h2>static:The Element has position according to the normal flow of the document</h2></div>
+    <hr>
+    <div><h1>Relative: "The element is posisioned relative to its normal position. Setting the top, right, bottom, and left properties will cause it to be adjusted away from its normal position..."</h1></div>
+    <hr>
+    <div><h2>Absolute: The element is positioned relative to its closest ancestor (not static). If there are no such ansesstors, it uses the the document body, and moves along with with page scrolling...</h2></div>
+    <hr>
+ <div><h2>Fixed: The element is posisioned relative to the viewport, Which means it always stays in the same place even if the page is scrolled.</h2></div>
+ <hr>
+ <div><h2>Sticky: The element is treated as relative positioned untill it crosses a specific threshold, at which point it is treated as fixed positioned...</h2></div>
+ <hr>
+ <h1><center>&copy;THANK YOU</center></h1>
+</body>
+</html>
