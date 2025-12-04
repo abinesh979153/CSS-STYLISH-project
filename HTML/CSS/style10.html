@@ -24,7 +24,32 @@
             height: 100px;
             background-color: red;
             margin-bottom: 10px;
-           }  
+           } 
+           .absolute-box{          
+            background-color: rgb(120, 17, 216);
+            position: absolute;
+            top: 100px;
+            right: 100px;
+            width: 100px;
+            height: 100px;
+           } 
+           .fixed-box{
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+           } 
+           .sticky-box{
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            width: 100px;
+            display: block;
+            background-color: chocolate;
+            padding: 10px;
+           }
     </STYle>
 </head>
 <body>
@@ -34,6 +59,7 @@
         <div class="absolute-box">absolute</div>
         <div class="sticky-box">sticky</div>
     </div>
+    <div class="fixed-box">fixed box</div>
     <hr>
     <div><h2>static:The Element has position according to the normal flow of the document</h2></div>
     <hr>
