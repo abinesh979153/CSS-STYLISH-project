@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css pseudo classes</title>
+    <style>
+        a:hover{
+            color: rgb(216, 6, 48);
+        }
+        h1:hover{
+            color: darkgreen;
+            font-family: fantasy;
+        }
+        button:active{
+                background-color: chartreuse;
+        }
+        input:focus{
+            padding: 7px;
+            border-radius: 5px;
+            border: 3px solid red;
+        }
+        li:nth-child(1){
+            color: rgb(43, 255, 0);
+        }
+        li:nth-child(2){
+            color: rgb(129, 4, 123);
+        }
+        li:nth-child(3){
+            color: rgb(129, 4, 81);
+        }
+        li:not(:last-child){
+            color: rgb(218, 7, 137);
+            border: 1px solid;
+        }
+        li:last-child{
+            border: 1px solid;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+   <center> <h1>CSS PSEUDO</h1></center>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente deserunt nesciunt vitae hic corporis unde eligendi id voluptate illo, voluptates distinctio saepe quaerat dicta maxime maiores animi dignissimos dolores odio!</p>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+    </ul>
+    <a href="">Hover on to this link</a><br><br>
+    <button>click me</button><br><br>
+    <input type="text" placeholder="focus on thisbox"><br><br>
+    <input type="text" placeholder="this is input disable" disabled><br><br>
+    <p>select the text from this para : Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolorem saepe nobis, esse aliquam harum amet sint necessitatibus distinctio molestias excepturi atque deserunt corrupti natus cum, eos accusamus at quisquam.</p>
+</body>
+</html>
