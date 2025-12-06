@@ -37,10 +37,30 @@
             border: 1px solid;
             margin-top: 10px;
         }
+        input:disabled{
+            background-color: rgb(93, 212, 216);
+        }
+        p::first-line{
+            font-family: cursive;
+        }
+        p::before{
+            content: "note : ";
+            font-weight: 600;
+            color: rgb(5, 21, 170);
+        }
+        p::after{
+            content: "end;";
+            font-weight: 600;
+            color: rgb(57, 16, 206);
+        }
+
+        ::selection{
+            background-color: rgb(19, 163, 6);
+        }
     </style>
 </head>
 <body>
-   <center> <h1>CSS PSEUDO</h1></center>
+   <center> <h1>CSS PSEUDO</h1> </center>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente deserunt nesciunt vitae hic corporis unde eligendi id voluptate illo, voluptates distinctio saepe quaerat dicta maxime maiores animi dignissimos dolores odio!</p>
     <ul>
         <li>item 1</li>
@@ -49,7 +69,8 @@
         <li>item 4</li>
         <li>item 5</li>
     </ul>
-    <a href="">Hover on to this link</a><br><br>
+    <center><a href="https://www.careers360.com/cse-full-form" target="_blank" style="border: 2px solid;">cse full form</a></center>
+    <hr>
     <button>click me</button><br><br>
     <input type="text" placeholder="focus on thisbox"><br><br>
     <input type="text" placeholder="this is input disable" disabled><br><br>
