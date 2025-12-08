@@ -1,12 +1,15 @@
 body{
     font-family: 'Courier New', Courier, monospace;
-    color: aqua;
+    color: whitesmoke;
     margin: 0px;
     padding: 0px;
     background: url(../IMAGES/gym-4.avif);
+    background-size: cover;
       background-repeat: no-repeat;
-    background-size: 100%;
-    color: blue;
+      /* background-position: ; */
+      height: 100%;
+      opacity: 0.7;
+    /* color: blue; */
 }
 .left{
     display: inline-block;
@@ -16,8 +19,8 @@ body{
 }
 
 .left img{
-     width: 100px;
-     filter: invert(40%);
+     width: 150px;
+     filter: invert(10%);
 }
 .left div{
     line-height: 20px;
@@ -67,3 +70,37 @@ body{
     background-color: white;
     color: black;
 }
+.container{ 
+    border: 2px solid rgb(95, 63, 2);
+    margin: 10px 50px;
+    padding: 16px;
+    width: 20%;
+    border-radius: 4px;
+      } 
+
+      .form-group{
+       text-align:center;
+        justify-content: center;
+        display: block;
+        width: 210px;
+        padding: 5px;
+        border: 2px solid rgb(39, 39, 39);
+        margin: 3px;
+        font-size: 25px;
+        border-radius: 5px;
+      }
+      input:hover{
+        color: white;
+        background-color: rgb(196, 160, 160);
+      }
+      .container h1{
+        color: rgb(180, 122, 46);
+        text-align: center;
+        font-size: 25px;
+      }
+      .container button{
+        display: block;
+        margin: 7px auto;
+         padding: 5px;
+        border: 2px solid rgb(39, 39, 39);
+      }
