@@ -1,0 +1,46 @@
+/* navbar */
+#navbar{
+    flex-direction: column;
+}
+
+#navbar ul li a{
+  font: size 0.8rem;
+  padding:3px 7px ;
+}
+
+#navbar{
+    height: 320px;
+    padding: 3px 50px;
+}
+
+#home::before{
+    height: 450px;
+}
+
+#homr p{
+    font-size: 15px;
+    line-height: 100%;
+}
+
+#services{
+    flex-direction: column;
+}
+
+#services .box{
+    padding: 30px;
+    margin: 2px;
+    margin-bottom: 20px;
+}
+
+#products{
+    flex-wrap: wrap;
+}
+
+#products img{
+    width: 100px;
+    height: auto;
+}
+
+#contact-box form{
+    width: 80%;
+}
