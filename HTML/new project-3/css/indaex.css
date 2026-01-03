@@ -1,0 +1,74 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap'); */
+:root{
+    --maintextcolor-light:#000;
+    --secondary-textcolor-light:rgb(51,51,51);
+    --mainlinkcolor-light:#0da2b8;
+    --mainbordercolor-light:rgb(218,218,218);
+    --mainbgcolor-light:rgb(249,250,251);
+}
+
+[data-theme="dark"]{
+    --maintextcolor-light:#000;
+    --secondary-textcolor-light:rgb(51,51,51);
+    --mainlinkcolor-light:#0da2b8;
+    --mainbordercolor-light:rgb(218,218,218);
+    --mainbgcolor-light:rgb(249,250,251);
+}
+
+*{
+    font-family: 'readex pro';
+    line-height: 1.5em;
+    box-sizing: border-box;
+    color: #000;
+}
+
+body{
+    background-color: var(--mainbordercolor-light);
+}
+
+/* theme switcher */
+#theme-swithcher{
+    position: fixed;
+    right: 1em;
+    top: 1em;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    color: red;
+}
+
+.theme{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transition: 0.3s;
+    border: 1px solid;
+}
+
+.theme:hover{
+    height: 33px;
+    width: 33px;
+}
+
+#theme-dark{
+    background-color: #000;
+}
+
+#theme-light{
+    background-color: #fff;
+}
+
+p, span, li{
+    color: var(--secondary-textcolor-light);
+    font-size: 1em;
+}
+
+a{
+    text-decoration: none;
+    color: var(--mainlinkcolor-light);
+    font-size: 500;
+}
+
+li{
+    line-height: 1.9rem;
+}
